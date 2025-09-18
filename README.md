@@ -12,6 +12,16 @@ This repo documents my **weekly learning progress**, shared on **GitHub** & **Li
 - **Dotenv** for configs  
 
 ---
+## 📝 Why these fields?
+
+- **`title` + `author`** → Basic identification of the book  
+- **`genre`** → Useful for practicing **filtering & grouping** queries  
+- **`price`** → Great for **range queries** (e.g., books priced above 500)  
+- **`rating`** → Perfect for **aggregation pipelines** (average rating, top-rated books)  
+- **`yearPublished`** → Helpful for **sorting, filtering, and statistics by year**  
+- **`createdAt`** → Auto-generated timestamp to track record creation
+
+---
 
 ## 📌 Learning Roadmap  
 
@@ -74,6 +84,5 @@ npm install
 # Run dev server
 npm run dev
 
----
 
 
