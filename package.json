@@ -1,0 +1,28 @@
+{
+  "name": "express-mongodb-practice",
+  "version": "1.0.0",
+  "description": "A step-by-step practice project to learn **MongoDB Query API** (CRUD + Aggregation Pipelines) and **Express.js REST APIs**.  \r This repo documents my **weekly learning progress**, shared on **GitHub** & **LinkedIn**.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app",
+    "dev": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arpn-Goyal/express-mongodb-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/arpn-Goyal/express-mongodb-practice/issues"
+  },
+  "homepage": "https://github.com/arpn-Goyal/express-mongodb-practice#readme",
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "mongoose": "^8.18.1"
+  }
+}
