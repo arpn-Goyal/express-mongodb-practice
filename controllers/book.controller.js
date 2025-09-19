@@ -10,12 +10,34 @@ export const addBook = async (req, res) => {
     }
 }
 
+// Basic Filtering 
 export const getBooks = async (req, res) => {
     try {
-        const books = await Book.find();
+        let filter = {};
+
+        // if(req.query.author) filter.author = req.query.author;
+        // if(req.query.genre) filter.genre = req.query.genre;
+
+        console.log(req.query)
+        // comparing operators
+        if(req.query['price[gt]']){
+            filter.price = {...filter.price, $gt : Number(req.query["price[gt]"])};
+        }
+        if(req.query['price[lt]']){
+            filter.price = {...filter.price, $lt : Number(req.query["price[lt]"])};
+        }
+
+        if(req.query['genre[in]']){
+            filter.genre = {$in: req.query['genre[in]'].split(',')}
+        }
+        
+        console.log("Filter being applied:", filter);
+
+        const books = await Book.find(filter);  
         res.json(books);
+
     } catch (error) {
-        res.status(500).json({ message: err.message });
+        res.status(500).json({ message: error.message });
     }
 }
 
